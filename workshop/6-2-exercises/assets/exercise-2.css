@@ -1,35 +1,72 @@
 @import 'css-reset.css';
-
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: rgb(30, 83, 72);
+    background: radial-gradient(circle, rgba(30, 83, 72, 1) 0%, rgba(34, 33, 48, 1) 100%);
+    color: white;
+    background-repeat: none;
+    background-size: cover;
+    font-family: 'Tomorrow', sans-serif;
+
 }
 
 .board {
-    background: #eaeaea;
+    background: url(../exercise-2-2/5-dots.png);
     display: grid;
-    grid-gap: 2px;
-    border: 2px solid #808080;
-    margin: 32px 0;
+    /* grid-gap: 2px; */
+    border: 3px solid #00FFBD;
+    margin: 60px 0;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 2px 35px -12px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 0px 2px 35px -12px rgba(0, 0, 0, 0.72);
+    box-shadow: 0px 2px 35px -12px rgba(0, 0, 0, 0.72);
 }
 
+
+h1{
+
+    font-size: 2em;
+    margin-top: 30px;
+}
 .cell {
-    background: #fff;
+    background: url(../exercise-2-2/5-dots.png);
     cursor: pointer;
+    border: 1px dotted #fff;
+    background-color: lightgreen;
+    transition: all .5s;
 }
 
 .cell:hover {
     background-color: #808080;
-    transition: background-color linear 300ms;
 }
 
 .form {
     display: flex;
     justify-content: space-around;
+    /* justify-content: space-around; */
     margin: 32px 0 0;
-    width: 200px;
+    /* width: 200px; */
+}
+label{
+    display: inline-block;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 60vw;
+    margin-top: 50px;
+}
+.left{
+    width: 70%;
+}
+
+.right{
+    width: 30%;
 }
 
 .form-item {
@@ -38,16 +75,34 @@ body {
 }
 
 .form-item label {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Tomorrow', sans-serif;
     font-size: 14px;
     margin-bottom: 3px;
     text-align: center;
     font-weight: 700;
+    text-align: right;
 }
 
 .form-item input {
     box-sizing: border-box;
     height: 32px;
-    width: 64px;
+    width: 60px;
     padding: 8px;
+    margin-left: 20px;
+}
+
+.columns-input, .rows-input{
+    background-color: black;
+    color: white;
+    border: 1px solid lightgray;
+    margin-top: 10px;
+    font-size: .9em;
+}
+
+.columns-input:focus{
+    outline: 1px solid #00FFBD;
+}
+
+.rows-input:focus{
+    outline: 1px solid #00FFBD;
 }

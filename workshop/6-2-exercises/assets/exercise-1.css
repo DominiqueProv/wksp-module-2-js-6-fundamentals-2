@@ -40,6 +40,9 @@ button {
     margin: 2px;
 }
 
+button:focus {outline:0;}
+
+
 .reset {
     font-size: 18px;
     height: 30px;

@@ -8,12 +8,14 @@ let verifyEquals = require('../../assets/verify-equals');
 // RADAR -> Yes
 // JAVASCRIPT -> No
 
-function f(str) {
 
+
+function f(str) {
+    return str === str.split('').reverse().join('');
 }
 
 // Test cases
-let inputs = [];
+let inputs = ['HELLO'];
 let outputs = [];
 
 // STOP -----------------------------------------------------------------

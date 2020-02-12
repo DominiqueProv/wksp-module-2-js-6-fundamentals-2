@@ -98,6 +98,20 @@ _It's one of the most important parts of this course._
 
 ## Testing
 
+
+//Example
+function sum(num1,num2){
+    return num1 + num2;
+}
+
+// A test
+function sumTest(x,y,z){
+    return sum(x,y) === z;
+}
+
+// Test Case
+sunTest(5,5,10);
+
 ---
 
 - What is it?

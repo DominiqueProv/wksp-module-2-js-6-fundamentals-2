@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html>
-    <title>Exercise 2.1</title>
-    <link rel="stylesheet" href="../assets/exercise-2.css" />
+<head>
+<title>Exercise 2.1</title>
+<link rel="stylesheet" href="../assets/exercise-2.css" />
+<link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+</head>
+
 <body>
-    <form class="form">
-        <div class="form-item">
-            <label for="rows">Rows</label>
-            <input id="rows-input" class="rows-input" name="rows" placeholder="# of rows" />
+    <div class="header">
+        <div class="left">
+            <h1>The best grid in the world</h1>
         </div>
-        <div class="form-item">
-            <label for="rows">Columns</label>
-            <input id="columns-input" class="columns-input" name="columns" placeholder="# of columns" />
-        </div>
-    </form>
+        <!-- <div class="right"> -->
+            <form class="form" id="form">
+                <div class="form-item">
+
+                    <label for="rows">Rows</label>
+                    <input id="rows-input" class="rows-input" name="rows" placeholder="# of rows"
+                        onkeypress="return isNumber(event)" maxlength="2" />
+                </div>
+                <div class="form-item">
+                    <label for="rows">Columns</label>
+                    <input id="columns-input" class="columns-input" name="columns" placeholder="# of columns"
+                        onkeypress="return isNumber(event)" maxlength="2" />
+                </div>
+            </form>
+        <!-- </div> -->
+    </div>
     <div id="board" class="board"></div>
     <script src="app.js"></script>
 </body>
+
 </html>

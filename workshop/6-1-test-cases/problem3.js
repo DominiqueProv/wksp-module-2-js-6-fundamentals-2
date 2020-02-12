@@ -8,16 +8,21 @@ let verifyEquals = require('../../assets/verify-equals');
 // If anything other than an array with 2 numbers is passed, return undefined.
 // You can use the typeof function to check the type of each element (e.g. typeof 3 returns 'number')
 
-function f(input) {
 
-}
+function f(input) {
+    if(input.length !== 2 || typeof input[0] !== 'number' || typeof input[1] !== 'number') {
+        return undefined;
+    }
+    return input[0] + input[1];
+};
+
 
 // Step 2
 // We need 7 test cases. The first input is provided.
 // Don't forget to test all of the question parameters
 
-let inputs = [[2, 4], [-3, 3]];
-let outputs = [6, 0];
+let inputs = [[2, 4], [-3, 3], [-3, 3, 4], ['word', 3], [4,'word'],['word','word'],[1]];
+let outputs = [6, 0, undefined, undefined, undefined, undefined, undefined];
 
 // Step 3
 // Run this file in the debugger.

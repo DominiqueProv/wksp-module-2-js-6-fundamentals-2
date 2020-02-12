@@ -11,13 +11,19 @@ let verifyEquals = require('../../assets/verify-equals');
 //  - Loop over the array of split characters in reverse order and fill the empty array by pushing each character into it
 //  - Convert the filled array into a string (use the join method) and return it
 
-function f(str) {
 
+function f(str) {
+    
+    let ind = str.split("");
+    let reverse = ind.reverse();
+    let join = reverse.join("");
+    
+    return join;
 }
 
 // We need 5 test cases.
-let inputs = [];
-let outputs = [];
+let inputs = ['hello','bye','shoes','man','miss'];
+let outputs = ['olleh','eyb','seohs','nam','ssim'];
 
 // STOP -----------------------------------------------------------------
 // No code changes below. This is the actual test that will run your test cases and validate your function.

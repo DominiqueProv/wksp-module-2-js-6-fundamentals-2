@@ -8,32 +8,35 @@ let verifyEquals = require('../../assets/verify-equals');
 // - If one of the numbers is not passed, or if anything other than numbers are passed, return undefined.
 
 function f(input) {
-    
-}
+    if (typeof input[0] !== 'number' || typeof input[1] !== 'number' || input.length !== 2) {
+        return undefined;
+    }
 
-// Step 2
-// We need 5 test cases. The first input is provided.
-// Don't forget to test all of the question parameters
+    return input[0] * input[1];
+};
+    // Step 2
+    // We need 5 test cases. The first input is provided.
+    // Don't forget to test all of the question parameters
 
-let inputs = [[2, 7]];
-let outputs = [14];
+    let inputs = [[2, 7],[4, 2],[10, 3],[40, 2],[5, 7]];
+    let outputs = [14, 8, 30, 80, 35];
 
-// Step 3
-// Run this file in the debugger.
-// If you get the "All test passed for..." message, move on to the next exercise.
+    // Step 3
+    // Run this file in the debugger.
+    // If you get the "All test passed for..." message, move on to the next exercise.
 
-// STOP -----------------------------------------------------------------
-// No code changes below. This is the actual test that will run your test cases and validate your function.
-function runTest(i) {
-    if (i >= inputs.length) throw new Error('You do not have enough test cases');
-    let expected = outputs[i];
-    let actual = f(inputs[i]);
-    verifyEquals(expected, actual);
-}
+    // STOP -----------------------------------------------------------------
+    // No code changes below. This is the actual test that will run your test cases and validate your function.
+    function runTest(i) {
+        if (i >= inputs.length) throw new Error('You do not have enough test cases');
+        let expected = outputs[i];
+        let actual = f(inputs[i]);
+        verifyEquals(expected, actual);
+    }
 
-runTest(0);
-runTest(1);
-runTest(2);
-runTest(3);
-runTest(4);
-console.log('All tests passed for ' + __filename);
+    runTest(0);
+    runTest(1);
+    runTest(2);
+    runTest(3);
+    runTest(4);
+    console.log('All tests passed for ' + __filename);

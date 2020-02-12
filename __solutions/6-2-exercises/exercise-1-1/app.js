@@ -17,6 +17,8 @@
 
 const btnList = document.querySelector('#btn-list');
 
+
+
 const handleClick = (e) => {
     const btnId = e.target.id;
     const btnElement = document.getElementById(btnId);
